@@ -7,26 +7,24 @@ public class Q6CheckingPrimeNumber {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter the number");
         int number = scanner.nextInt();
-        boolean isPrime;
+        int count=0;
 
-        for(int i = 2; i < number; i++){
-            if(number <2){
-           System.out.println("Invalid number");
-           isPrime=false;
-           break;
+
+            for(int i =1; i <= number; i++){
+                if(number%i ==0){
+                    count++;
+                }
             }
-
-            if(number% i==0){
-                isPrime=false;
-                System.out.println(number + " is not Prime");
-                break;
+            if(count==2){
+                System.out.println("Number is Prime");
             }
             else {
-                isPrime =true;
-                System.out.println(number + " is Prime");
+                System.out.println("Number is not Prime");
             }
-            break;
-        }
+
+
+
+
 
 
 
